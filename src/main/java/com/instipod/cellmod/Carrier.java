@@ -42,23 +42,44 @@ public class Carrier {
     }
 }
         Double dist = best.distance(player.getLocation()) - effect;
-             if (dist > 170) {
+             if (dist > 400) {
                  message = plugin.languageConfig.getString("NoService") + " [    ]";
              } else {
-                 if (dist < 30) {
-                 message = "3G [" + ChatColor.GREEN + "-----" + ChatColor.WHITE + "]";
-             } else {
                  if (dist < 60) {
-                 message = "3G [" + ChatColor.DARK_GREEN + "---- " + ChatColor.WHITE + "]";
+                 message = "LTE [" + ChatColor.GREEN + "-----" + ChatColor.WHITE + "]";
              } else {
-                 if (dist < 110) {
-                 message = "E [" + ChatColor.DARK_BLUE + "---  " + ChatColor.WHITE + "]";
+                 if (dist < 100) {
+                 message = "LTE [" + ChatColor.DARK_GREEN + "---- " + ChatColor.WHITE + "]";
              } else {
-                 if (dist < 135) {
-                 message = "E [" + ChatColor.RED + "--   " + ChatColor.WHITE + "]";
+                 if (dist < 150) {
+                 message = "LTE [" + ChatColor.DARK_BLUE + "---  " + ChatColor.WHITE + "]";
              } else {
-                    if (dist < 169) {
-                 message = "GPRS [" + ChatColor.DARK_RED + "-    " + ChatColor.WHITE + "]";
+                 if (dist < 180) {
+                 message = "LTE [" + ChatColor.RED + "--   " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 200) {
+                 message = "LTE [" + ChatColor.DARK_RED + "-    " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 240) {
+                 message = "4G [" + ChatColor.RED + "---  " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 280) {
+                 message = "4G [" + ChatColor.RED + "--   " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 320) {
+                 message = "4G [" + ChatColor.RED + "-   " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 360) {
+                 message = "3G [" + ChatColor.RED + "--   " + ChatColor.WHITE + "]";
+             } else {
+                 if (dist < 400) {
+                 message = "E [" + ChatColor.RED + "-   " + ChatColor.WHITE + "]";
+                                
+                                 }
+                             }
+                         }
+                     }
+                 }
              } 
                  }
              }
